@@ -15,7 +15,9 @@ Making a Robot Mouth by LED Dot Matrix
 ----------
   
 ## Simulation:
-
+Hardware Required:
+1. Arduino UNO
+2. LED Dot Matrix
 
 ------------
 ## Coding:
