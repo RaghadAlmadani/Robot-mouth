@@ -1,5 +1,5 @@
 # Robot-mouth
-Making a mouth by LED Dot Matrix 
+Making a Robot Mouth by LED Dot Matrix 
 
 ## Definition:
 <img src="https://www.crowdsupply.com/img/76e8/wokwi-logo_png_organization-profile.png" width="200" />
@@ -14,3 +14,8 @@ Making a mouth by LED Dot Matrix
 - LED Dot Matrix -> is a display technology that uses a grid of light-emitting diodes (LEDs) arranged in rows and columns to create images, text, or animations. Each individual LED acts as a pixel, and by turning specific LEDs on or off, or by adjusting their brightness, the matrix can display various patterns or information.
 ----------
   
+## Simulation:
+
+
+------------
+## Coding:
