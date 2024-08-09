@@ -1,7 +1,7 @@
 # Robot-mouth
 Making a Robot Mouth by LED Dot Matrix 
 
-## Definition:
+## Definitions :
 <img src="https://www.crowdsupply.com/img/76e8/wokwi-logo_png_organization-profile.png" width="200" />
 
 - Wokwi -> is an online platform that provides a simulation environment for developing and testing Arduino and ESP32 projects. It allows users to create virtual circuits and simulate their behavior without the need for physical hardware.
@@ -14,10 +14,21 @@ Making a Robot Mouth by LED Dot Matrix
 - LED Dot Matrix -> is a display technology that uses a grid of light-emitting diodes (LEDs) arranged in rows and columns to create images, text, or animations. Each individual LED acts as a pixel, and by turning specific LEDs on or off, or by adjusting their brightness, the matrix can display various patterns or information.
 ----------
   
-## Simulation:
+## Simulation :
 Hardware Required:
 1. Arduino UNO
 2. LED Dot Matrix
+   
+![Screenshot 2024-08-09 170434](https://github.com/user-attachments/assets/2a64ddd7-cc5c-4c14-adbb-67ab86b1bf04)
+
+**LED dot matrix pins :**
+
+- VCC -> is the power pin, and it's connected to 5V on Ardunio (the red wire).
+- GND -> is the ground pin, and it's connected to GND on the ardunio (the black wire).
+- DIN -> is the data pin, and it's connected to digital pin 11 (the yellow wire).
+- CS -> is chip select, and it's connected to digital pin 10 (the green wire).
+- CLK -> is clock pin, and it's connected to digital pin 13 (the pink wire).
+   
 
 ------------
-## Coding:
+## Coding :
