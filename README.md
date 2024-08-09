@@ -25,7 +25,7 @@ Hardware Required:
 
 - VCC -> is the power pin, and it's connected to 5V on Ardunio (the red wire).
 - GND -> is the ground pin, and it's connected to GND on the ardunio (the black wire).
-- DIN -> is the data pin, and it's connected to digital pin 11 (the yellow wire).
+- DIN -> is the data input pin, and it's connected to digital pin 11 (the yellow wire).
 - CS -> is chip select, and it's connected to digital pin 10 (the green wire).
 - CLK -> is clock pin, and it's connected to digital pin 13 (the pink wire).
    
