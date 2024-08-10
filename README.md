@@ -32,3 +32,89 @@ Hardware Required:
 
 ------------
 ## Coding :
+``` C++
+// Include the llibraties
+#include <MD_MAX72xx.h>
+#include <SPI.h>
+
+// Define hardware type, size, and pins
+#define HARDWARE_TYPE MD_MAX72XX::FC16_HW
+#define MAX_DEVICES 1 // The number of led dot matrix 
+#define CLK_PIN   13
+#define DATA_PIN  11
+#define CS_PIN    10
+
+// Create a MAX72xx object
+MD_MAX72XX display = MD_MAX72XX(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
+
+// Bitmaps for animations
+byte smiley[2][8] = {
+  {0b00000000,0b00000000,0b00100100,0b00000000,0b01000010,0b00111100,0b00000000,0b00000000},
+  {0b0000000, 0b00000000, 0b00100100, 0b00000000, 0b00111100, 0b00000000, 0b00000000, 0b00000000}
+};
+
+
+// Scrolling text message
+const char *scrollingText = " Components101 ";
+uint16_t scrollDelay = 100; // Delay between shifts in milliseconds
+uint16_t displayTime = 500; // Time each frame is shown in milliseconds
+int brightnessLevel = 8; // Set brightness level (0 is minimum, 15 is maximum)
+
+void setup() {
+  Serial.begin(115200);
+  display.begin(); // Initialize the display
+  display.control(MD_MAX72XX::INTENSITY, brightnessLevel); // Set the brightness level
+  display.clear(); // Clear the display
+}
+
+void loop() {
+  playAnimation(smiley, 2, 2);
+
+}
+
+void playAnimation(byte animation[][8], int frameCount, int repeat) {
+  for (int r = 0; r < repeat; r++) {
+    for (int i = 0; i < frameCount; i++) {
+      displayFrame(animation[i]);
+      delay(displayTime); // Wait before showing next frame
+    }
+  }
+}
+
+void playRandomFlash(int count, int repeat) {
+  for (int r = 0; r < repeat; r++) {
+    for (int i = 0; i < count; i++) {
+      byte row = rand() % 8;
+      byte col = rand() % 8;
+      display.setPoint(row, col, true);  // Turn on a random LED
+      display.update();
+      delay(50);  // Short flash
+      display.setPoint(row, col, false); // Turn off the LED
+      display.update();
+    }
+  }
+}
+
+void displayFrame(byte frame[8]) {
+  for (int i = 0; i < 8; i++) {
+    display.setRow(0, i, frame[i]); // Display each row of the bitmap
+  }
+  display.update(); // Ensure the display is updated
+}
+
+```
+
+---------------------------------
+## The Resulte :
+
+
+https://github.com/user-attachments/assets/7064abbb-4d7d-4e83-9f18-cdab637c35b6
+
+From the video, I attempt to make the robot move its mouth while talking. Here the project link on [Wokwi](https://wokwi.com/projects/405675697097801729).
+
+------------------
+
+## Helpful Resources :
+1. [Document about LED dot matrix](https://lastminuteengineers.com/max7219-dot-matrix-arduino-tutorial/)
+2. [YouTube video explains how led dot matrix works](https://youtu.be/pHw3AokxRXM?si=cn4a4Ch2YJvymox-)
+
