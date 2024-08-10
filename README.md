@@ -117,4 +117,5 @@ From the video, I attempt to make the robot move its mouth while talking. Here t
 ## Helpful Resources :
 1. [Document about LED dot matrix](https://lastminuteengineers.com/max7219-dot-matrix-arduino-tutorial/)
 2. [YouTube video explains how led dot matrix works](https://youtu.be/pHw3AokxRXM?si=cn4a4Ch2YJvymox-)
+3. [Online led matrix font generator with binary and hex codes for Arduino](https://www.riyas.org/2013/12/online-led-matrix-font-generator-with.html)
 
